@@ -6,6 +6,7 @@ using LmpClient.Systems.Flag;
 using LmpClient.Systems.Handshake;
 using LmpClient.Systems.KerbalSys;
 using LmpClient.Systems.Lock;
+using LmpClient.Systems.NetworkTime;
 using LmpClient.Systems.PlayerColorSys;
 using LmpClient.Systems.PlayerConnection;
 using LmpClient.Systems.Scenario;
@@ -94,16 +95,29 @@ namespace LmpClient.Systems.Network
                     break;
                 case ClientState.Handshaked:
                     MainSystem.Singleton.Status = "Handshaking successful";
+                    NetworkTimeSystem.Singleton.Enabled = true;
+                    MainSystem.NetworkState = ClientState.NetworkTime;
+                    _lastStateTime = LunaComputerTime.UtcNow;
+                    break;
+                case ClientState.NetworkTime:
+                    MainSystem.Singleton.Status = "Syncing network time";
+                    NetworkTimeSystem.Singleton.MessageSender.SendNetworkTimeRequest();
+                    if (ConnectionIsStuck(5000))
+                    {
+                        MainSystem.NetworkState = ClientState.NetworkTimeSynced;
+                    }
+                    break;
+                case ClientState.NetworkTimeSynced:
+                    MainSystem.Singleton.Status = "Synced network time";
+                    _lastStateTime = LunaComputerTime.UtcNow;
                     SettingsSystem.Singleton.Enabled = true;
                     MainSystem.NetworkState = ClientState.SyncingSettings;
                     SettingsSystem.Singleton.MessageSender.SendSettingsRequest();
-
-                    _lastStateTime = LunaComputerTime.UtcNow;
                     break;
                 case ClientState.SyncingSettings:
                     MainSystem.Singleton.Status = "Syncing settings";
                     if (ConnectionIsStuck())
-                        MainSystem.NetworkState = ClientState.Handshaked;
+                        MainSystem.NetworkState = ClientState.NetworkTime;
                     break;
                 case ClientState.SettingsSynced:
                     MainSystem.Singleton.Status = "Settings synced";

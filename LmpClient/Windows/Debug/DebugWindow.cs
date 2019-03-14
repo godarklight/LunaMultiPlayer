@@ -2,6 +2,7 @@
 using LmpClient.Network;
 using LmpClient.Systems.TimeSync;
 using LmpClient.Systems.Warp;
+using LmpClient.Systems.NetworkTime;
 using LmpCommon.Enums;
 using LmpCommon.Time;
 using System;
@@ -69,11 +70,12 @@ namespace LmpClient.Windows.Debug
                     StringBuilder.AppendLine($"Computer clock offset (minutes): {LunaComputerTime.SimulatedMinutesTimeOffset}");
                     StringBuilder.AppendLine($"Computer clock time + offset: {LunaComputerTime.UtcNow:HH:mm:ss.fff}");
                     
-                    StringBuilder.AppendLine($"Computer <-> NTP clock difference: {LunaNetworkTime.TimeDifference.TotalMilliseconds}ms.");
-                    StringBuilder.AppendLine($"NTP clock offset: {LunaNetworkTime.SimulatedMsTimeOffset}ms.");
+                    StringBuilder.AppendLine($"Computer <-> Server clock difference: {LunaNetworkTime.TimeDifference.TotalMilliseconds}ms.");
+                    StringBuilder.AppendLine($"Simulated clock offset: {LunaNetworkTime.SimulatedMsTimeOffset}ms.");
+                    StringBuilder.AppendLine($"Server latency: {NetworkTimeSystem.Singleton.MessageHandler.latency / (float)TimeSpan.TicksPerMillisecond}ms.");
                     StringBuilder.AppendLine($"Total Difference: {LunaNetworkTime.TimeDifference.TotalMilliseconds + LunaNetworkTime.SimulatedMsTimeOffset}ms.");
 
-                    StringBuilder.AppendLine($"NTP clock time (UTP): {LunaNetworkTime.UtcNow:HH:mm:ss.fff}");
+                    StringBuilder.AppendLine($"Server clock time (UTP): {LunaNetworkTime.UtcNow:HH:mm:ss.fff}");
 
                     _timeText = StringBuilder.ToString();
                     StringBuilder.Length = 0;

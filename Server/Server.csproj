@@ -239,6 +239,8 @@
     <Compile Include="Web\Structures\VesselInfo.cs" />
     <Compile Include="Web\WebServer.cs" />
     <Compile Include="Web\Handlers\ServerInformationRestController.cs" />
+    <Compile Include="Message\NetworkTimeMsgReader.cs" />
+    <Compile Include="System\NetworkTimeSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Lidgren.Network\Lidgren.Network.csproj">

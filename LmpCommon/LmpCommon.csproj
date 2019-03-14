@@ -311,13 +311,15 @@
     <Compile Include="ServerInfo.cs" />
     <Compile Include="Time\LunaComputerTime.cs" />
     <Compile Include="Time\LunaNetworkTime.cs" />
-    <Compile Include="Time\TimeEnums.cs" />
-    <Compile Include="Time\TimeRetriever.cs" />
-    <Compile Include="Time\TimeRetrieverNist.cs" />
-    <Compile Include="Time\TimeRetrieverNtp.cs" />
     <Compile Include="Time\TimeUtil.cs" />
     <Compile Include="Xml\LunaXmlSerializer.cs" />
     <Compile Include="Xml\XmlCommentAttribute.cs" />
+    <Compile Include="Message\Client\NetworkTimeCliMsg.cs" />
+    <Compile Include="Message\Data\Time\NetworkTimeBaseMsgData.cs" />
+    <Compile Include="Message\Data\Time\NetworkTimeReplyMsgData.cs" />
+    <Compile Include="Message\Data\Time\NetworkTimeRequestMsgData.cs" />
+    <Compile Include="Message\Types\NetworkTimeMessageType.cs" />
+    <Compile Include="Message\Server\NetworkTimeSrvMsg.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -336,6 +338,9 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Message\Data\Time\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -511,6 +511,9 @@
     <Compile Include="Windows\Vessels\Structures\VesselDisplay.cs" />
     <Compile Include="Windows\WindowUtil.cs" />
     <Compile Include="Windows\WindowsHandler.cs" />
+    <Compile Include="Systems\NetworkTime\NetworkTimeMessageHandler.cs" />
+    <Compile Include="Systems\NetworkTime\NetworkTimeMessageSender.cs" />
+    <Compile Include="Systems\NetworkTime\NetworkTimeSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Localization\XML\Danish\AdminWindowText.xml" />
@@ -794,6 +797,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Systems\NetworkTime\" />
+  </ItemGroup>
   <PropertyGroup>
     <PostBuildEvent Condition="'$(OS)' != 'Unix'">if /I "$(ConfigurationName)" == "Debug" call  "$(SolutionDir)Scripts\CopyToKSPDirectory.bat" $(ConfigurationName)</PostBuildEvent>
   </PropertyGroup>

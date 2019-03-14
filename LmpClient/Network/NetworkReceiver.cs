@@ -10,6 +10,7 @@ using LmpClient.Systems.KerbalSys;
 using LmpClient.Systems.Lock;
 using LmpClient.Systems.ModApi;
 using LmpClient.Systems.Motd;
+using LmpClient.Systems.NetworkTime;
 using LmpClient.Systems.PlayerColorSys;
 using LmpClient.Systems.PlayerConnection;
 using LmpClient.Systems.Scenario;
@@ -270,6 +271,9 @@ namespace LmpClient.Network
                     break;
                 case ServerMessageType.Screenshot:
                     ScreenshotSystem.Singleton.EnqueueMessage(msg);
+                    break;
+                case ServerMessageType.NetworkTime:
+                    NetworkTimeSystem.Singleton.EnqueueMessage(msg);
                     break;
                 default:
                     LunaLog.LogError($"[LMP]: Unhandled Message type {msg.MessageType}");

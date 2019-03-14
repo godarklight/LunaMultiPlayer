@@ -8,6 +8,8 @@
         Connected = 2,
         Handshaking = 3,
         Handshaked = 6,
+        NetworkTime = 26,
+        NetworkTimeSynced = 27,
 
         SyncingSettings = 7,
         SettingsSynced = 8,

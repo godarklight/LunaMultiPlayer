@@ -40,6 +40,7 @@ namespace Server.Server
             [ClientMessageType.Facility] = new FacilityMsgReader(),
             [ClientMessageType.Screenshot] = new ScreenshotMsgReader(),
             [ClientMessageType.ShareProgress] = new ShareProgressMsgReader(),
+            [ClientMessageType.NetworkTime] = new NetworkTimeMsgReader(),
         };
 
         #endregion

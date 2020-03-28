@@ -1,0 +1,6 @@
+/home/darklight/Projects/LunaMultiplayer/DotNet/CachedQuickLz/bin/Debug/netcoreapp3.1/CachedQuickLz.deps.json
+/home/darklight/Projects/LunaMultiplayer/DotNet/CachedQuickLz/bin/Debug/netcoreapp3.1/CachedQuickLz.dll
+/home/darklight/Projects/LunaMultiplayer/DotNet/CachedQuickLz/bin/Debug/netcoreapp3.1/CachedQuickLz.pdb
+/home/darklight/Projects/LunaMultiplayer/DotNet/CachedQuickLz/obj/Debug/netcoreapp3.1/CachedQuickLz.dll
+/home/darklight/Projects/LunaMultiplayer/DotNet/CachedQuickLz/obj/Debug/netcoreapp3.1/CachedQuickLz.pdb
+/home/darklight/Projects/LunaMultiplayer/DotNet/CachedQuickLz/obj/Debug/netcoreapp3.1/CachedQuickLz.csprojAssemblyReference.cache

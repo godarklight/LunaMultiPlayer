@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo> 
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../CachedQuickLz/CachedQuickLz/Properties/AssemblyInfo.cs"/>
+    <Compile Include="../../CachedQuickLz/CachedQuickLz/CachedQlzDecompress.cs"/>
+    <Compile Include="../../CachedQuickLz/CachedQuickLz/QlzConstants.cs"/>
+    <Compile Include="../../CachedQuickLz/CachedQuickLz/ArrayPool.cs"/>
+    <Compile Include="../../CachedQuickLz/CachedQuickLz/CachedQlzCompress.cs"/>
+    <Compile Include="../../CachedQuickLz/CachedQuickLz/CachedQlzCommon.cs"/>
+    <Compile Include="../../CachedQuickLz/CachedQuickLz/HashtablePool.cs"/>
+  </ItemGroup>
+</Project>

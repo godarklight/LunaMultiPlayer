@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../LunaConfigNode/LunaConfigNode/XmlConverter.cs"/>
+    <Compile Include="../../LunaConfigNode/LunaConfigNode/CfgNodeConstants.cs"/>
+    <Compile Include="../../LunaConfigNode/LunaConfigNode/CfgNode/ConfigNodeRemove.cs"/>
+    <Compile Include="../../LunaConfigNode/LunaConfigNode/CfgNode/ConfigNodeGetter.cs"/>
+    <Compile Include="../../LunaConfigNode/LunaConfigNode/CfgNode/ConfigNode.cs"/>
+    <Compile Include="../../LunaConfigNode/LunaConfigNode/CfgNode/CfgNodeValue.cs"/>
+    <Compile Include="../../LunaConfigNode/LunaConfigNode/CfgNode/ConfigNodeUpdater.cs"/>
+    <Compile Include="../../LunaConfigNode/LunaConfigNode/CfgNode/ConfigNodeAdd.cs"/>
+    <Compile Include="../../LunaConfigNode/LunaConfigNode/MixedCollection.cs"/>
+    <Compile Include="../../LunaConfigNode/LunaConfigNode/CfgNodeWriter.cs"/>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+[submodule "CachedQuickLz"]
+	path = CachedQuickLz
+	url = git@github.com:LunaMultiplayer/CachedQuickLz.git
+	branch = master
+[submodule "LunaConfigNode"]
+	path = LunaConfigNode
+	url = git@github.com:LunaMultiplayer/LunaConfigNode.git
+	branch = master
+[submodule "jsonfx"]
+	path = jsonfx
+	url = https://github.com/jsonfx/jsonfx.git
+	branch = master

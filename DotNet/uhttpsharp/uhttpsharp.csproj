@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../uhttpsharp/IHttpContext.cs"/>
+    <Compile Include="../../uhttpsharp/TaskFactoryExtensions.cs"/>
+    <Compile Include="../../uhttpsharp/HttpRequest.cs"/>
+    <Compile Include="../../uhttpsharp/ModelBinders/IModelBinder.cs"/>
+    <Compile Include="../../uhttpsharp/ModelBinders/ModelBinder.cs"/>
+    <Compile Include="../../uhttpsharp/ModelBinders/JsonModelBinder.cs"/>
+    <Compile Include="../../uhttpsharp/HttpRequestHandler.cs"/>
+    <Compile Include="../../uhttpsharp/IHttpMethodProvider.cs"/>
+    <Compile Include="../../uhttpsharp/HttpContext.cs"/>
+    <Compile Include="../../uhttpsharp/RequestProviders/HttpRequestMethodDecorator.cs"/>
+    <Compile Include="../../uhttpsharp/RequestProviders/HttpRequestProvider.cs"/>
+    <Compile Include="../../uhttpsharp/RequestProviders/HttpRequestProviderMethodOverrideDecorator.cs"/>
+    <Compile Include="../../uhttpsharp/RequestProviders/IHttpRequestProvider.cs"/>
+    <Compile Include="../../uhttpsharp/Headers/IHttpHeaders.cs"/>
+    <Compile Include="../../uhttpsharp/Headers/QueryStringHttpHeaders.cs"/>
+    <Compile Include="../../uhttpsharp/Headers/HttpHeaders.cs"/>
+    <Compile Include="../../uhttpsharp/Headers/HttpHeadersExtensions.cs"/>
+    <Compile Include="../../uhttpsharp/Headers/HttpHeadersDebuggerProxy.cs"/>
+    <Compile Include="../../uhttpsharp/Headers/EmptyHttpHeaders.cs"/>
+    <Compile Include="../../uhttpsharp/Headers/CompositeHttpHeaders.cs"/>
+    <Compile Include="../../uhttpsharp/HttpMethodProviderCache.cs"/>
+    <Compile Include="../../uhttpsharp/HttpResponseCode.cs"/>
+    <Compile Include="../../uhttpsharp/Listeners/TcpListenerAdapter.cs"/>
+    <Compile Include="../../uhttpsharp/Listeners/SslListenerDecoerator.cs"/>
+    <Compile Include="../../uhttpsharp/Listeners/IHttpListener.cs"/>
+    <Compile Include="../../uhttpsharp/HttpResponse.cs"/>
+    <Compile Include="../../uhttpsharp/HttpMethodProvider.cs"/>
+    <Compile Include="../../uhttpsharp/Controllers/IErrorContainer.cs"/>
+    <Compile Include="../../uhttpsharp/Controllers/ErrorContainer.cs"/>
+    <Compile Include="../../uhttpsharp/Controllers/IControllerResponse.cs"/>
+    <Compile Include="../../uhttpsharp/Controllers/IPipeline.cs"/>
+    <Compile Include="../../uhttpsharp/Controllers/IController.cs"/>
+    <Compile Include="../../uhttpsharp/Controllers/IRequestParameter.cs"/>
+    <Compile Include="../../uhttpsharp/Json/IPAddressConverter.cs"/>
+    <Compile Include="../../uhttpsharp/Json/IPEndPointConverter.cs"/>
+    <Compile Include="../../uhttpsharp/Handlers/RestHandler.cs"/>
+    <Compile Include="../../uhttpsharp/Handlers/ControllerHandler.cs"/>
+    <Compile Include="../../uhttpsharp/Handlers/JsonResponseProvider.cs"/>
+    <Compile Include="../../uhttpsharp/Handlers/ClassRouter.cs"/>
+    <Compile Include="../../uhttpsharp/Handlers/IRestController.cs"/>
+    <Compile Include="../../uhttpsharp/Handlers/HttpRouter.cs"/>
+    <Compile Include="../../uhttpsharp/Handlers/IResponseProvider.cs"/>
+    <Compile Include="../../uhttpsharp/Handlers/Compression/GZipCompressor.cs"/>
+    <Compile Include="../../uhttpsharp/Handlers/Compression/CompressionHandler.cs"/>
+    <Compile Include="../../uhttpsharp/Handlers/Compression/CompressedResponse.cs"/>
+    <Compile Include="../../uhttpsharp/Handlers/Compression/DeflateCompressor.cs"/>
+    <Compile Include="../../uhttpsharp/Handlers/Compression/ICompressor.cs"/>
+    <Compile Include="../../uhttpsharp/Handlers/IView.cs"/>
+    <Compile Include="../../uhttpsharp/Handlers/FileHandler.cs"/>
+    <Compile Include="../../uhttpsharp/HttpServer.cs"/>
+    <Compile Include="../../uhttpsharp/LimitedStream.cs"/>
+    <Compile Include="../../uhttpsharp/HttpClient.cs"/>
+    <Compile Include="../../uhttpsharp/HttpServerExtensions.cs"/>
+    <Compile Include="../../uhttpsharp/Clients/ClientSslDecoerator.cs"/>
+    <Compile Include="../../uhttpsharp/Clients/TcpClientAdapter.cs"/>
+    <Compile Include="../../uhttpsharp/Clients/IClient.cs"/>
+    <Compile Include="../../uhttpsharp/Attributes/HttpMethodAttribute.cs"/>
+    <Compile Include="../../uhttpsharp/Attributes/NullableAttribute.cs"/>
+    <Compile Include="../../uhttpsharp/Attributes/IModelBinding.cs"/>
+    <Compile Include="../../uhttpsharp/HttpMethods.cs"/>
+    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="NewtonSoft.Json" Version="12.0.3" />
+  </ItemGroup>
+</Project>

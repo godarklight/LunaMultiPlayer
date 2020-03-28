@@ -1,0 +1,6 @@
+/home/darklight/Projects/LunaMultiplayer/DotNet/jsonfx/bin/Debug/netcoreapp3.1/jsonfx.deps.json
+/home/darklight/Projects/LunaMultiplayer/DotNet/jsonfx/bin/Debug/netcoreapp3.1/jsonfx.dll
+/home/darklight/Projects/LunaMultiplayer/DotNet/jsonfx/bin/Debug/netcoreapp3.1/jsonfx.pdb
+/home/darklight/Projects/LunaMultiplayer/DotNet/jsonfx/obj/Debug/netcoreapp3.1/jsonfx.dll
+/home/darklight/Projects/LunaMultiplayer/DotNet/jsonfx/obj/Debug/netcoreapp3.1/jsonfx.pdb
+/home/darklight/Projects/LunaMultiplayer/DotNet/jsonfx/obj/Debug/netcoreapp3.1/jsonfx.csprojAssemblyReference.cache

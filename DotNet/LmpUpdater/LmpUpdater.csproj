@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../LmpUpdater/Properties/AssemblyInfo.cs"/>
+    <Compile Include="../../LmpUpdater/Github/GithubUpdateExtractor.cs"/>
+    <Compile Include="../../LmpUpdater/Github/GithubProduct.cs"/>
+    <Compile Include="../../LmpUpdater/Github/GithubUpdateDownloader.cs"/>
+    <Compile Include="../../LmpUpdater/Github/GithubUpdateChecker.cs"/>
+    <Compile Include="../../LmpUpdater/Github/Contracts/GitHubUploader.cs"/>
+    <Compile Include="../../LmpUpdater/Github/Contracts/GitHubRelease.cs"/>
+    <Compile Include="../../LmpUpdater/Github/Contracts/GitHubAuthor.cs"/>
+    <Compile Include="../../LmpUpdater/Github/Contracts/GitHubAsset.cs"/>
+    <Compile Include="../../LmpUpdater/Appveyor/AppveyorUpdateExtractor.cs"/>
+    <Compile Include="../../LmpUpdater/Appveyor/AppveyorProduct.cs"/>
+    <Compile Include="../../LmpUpdater/Appveyor/AppveyorUpdateDownloader.cs"/>
+    <Compile Include="../../LmpUpdater/Appveyor/AppveyorUpdateChecker.cs"/>
+    <Compile Include="../../LmpUpdater/Appveyor/Contracts/Build.cs"/>
+    <Compile Include="../../LmpUpdater/Appveyor/Contracts/SecurityDescriptor.cs"/>
+    <Compile Include="../../LmpUpdater/Appveyor/Contracts/RootObject.cs"/>
+    <Compile Include="../../LmpUpdater/Appveyor/Contracts/AccessRight.cs"/>
+    <Compile Include="../../LmpUpdater/Appveyor/Contracts/RoleAce.cs"/>
+    <Compile Include="../../LmpUpdater/Appveyor/Contracts/Job.cs"/>
+    <Compile Include="../../LmpUpdater/Appveyor/Contracts/AccessRightDefinition.cs"/>
+    <Compile Include="../../LmpUpdater/Appveyor/Contracts/Project.cs"/>
+    <Compile Include="../../LmpUpdater/Appveyor/Contracts/NuGetFeed.cs"/>
+    <Compile Include="../../LmpUpdater/CommonDownloader.cs"/>
+    <ProjectReference Include="..\LmpGlobal\LmpGlobal.csproj" />
+    <ProjectReference Include="..\jsonfx\jsonfx.csproj" />
+  </ItemGroup>
+</Project>

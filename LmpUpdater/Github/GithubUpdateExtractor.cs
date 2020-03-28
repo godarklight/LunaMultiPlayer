@@ -1,6 +1,6 @@
-﻿using Ionic.Zip;
-using System;
+﻿using System;
 using System.IO;
+using System.IO.Compression;
 
 namespace LmpUpdater.Github
 {
@@ -11,11 +11,11 @@ namespace LmpUpdater.Github
             if (string.IsNullOrEmpty(zipFilePath) || string.IsNullOrEmpty(destinationFolder) || !Directory.Exists(destinationFolder) || !File.Exists(zipFilePath))
                 return;
 
-            using (var zipFile = ZipFile.Read(zipFilePath))
+            using (var zipFile = ZipFile.OpenRead(zipFilePath))
             {
                 var tempFolder = Path.Combine(destinationFolder, "TempUnzipFolder");
                 Directory.CreateDirectory(tempFolder);
-                zipFile.ExtractAll(tempFolder, ExtractExistingFileAction.OverwriteSilently);
+                zipFile.ExtractToDirectory(tempFolder);
 
                 switch (product)
                 {

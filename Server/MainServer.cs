@@ -140,12 +140,18 @@ namespace Server
                 LunaLog.Debug("Loading mod control...");
                 ModFileSystem.LoadModFile();
             }
-
-            Console.Title += $" ({GeneralSettings.SettingsStore.ServerName})";
+            try
+            {
+                Console.Title += $" ({GeneralSettings.SettingsStore.ServerName})";
 
 #if DEBUG
-            Console.Title += " DEBUG";
+                Console.Title += " DEBUG";
 #endif
+            }
+            catch (PlatformNotSupportedException)
+            {
+                //We don't care.
+            }
         }
 
         /// <summary>

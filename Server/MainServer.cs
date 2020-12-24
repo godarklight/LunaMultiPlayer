@@ -41,7 +41,14 @@ namespace Server
         {
             try
             {
-                Console.Title = $"LMP {LmpVersioning.CurrentVersion}";
+                try
+                {
+                    Console.Title = $"LMP {LmpVersioning.CurrentVersion}";
+                }
+                catch
+                {
+                    LunaLog.Debug("Setting console title not supported on linux/mac");
+                }
 
                 Console.OutputEncoding = Encoding.Unicode;
 
@@ -141,12 +148,18 @@ namespace Server
                 LunaLog.Debug("Loading mod control...");
                 ModFileSystem.LoadModFile();
             }
-
-            Console.Title += $" ({GeneralSettings.SettingsStore.ServerName})";
+            try
+            {
+                Console.Title += $" ({GeneralSettings.SettingsStore.ServerName})";
 
 #if DEBUG
-            Console.Title += " DEBUG";
+                Console.Title += " DEBUG";
 #endif
+            }
+            catch
+            {
+                LunaLog.Debug("Setting console title not supported on linux/mac");
+            }
         }
 
         /// <summary>

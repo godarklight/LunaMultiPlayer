@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../LmpUpdater/**/*.cs" Exclude="../../LmpUpdater/obj/**" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LmpGlobal\LmpGlobal.csproj" />
+    <ProjectReference Include="..\CachedQuickLz\CachedQuickLz.csproj" />
+    <ProjectReference Include="..\Lidgren.Network\Lidgren.Network.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Ionic.zip" Version="1.9.1.8" />
+    <PackageReference Include="jsonfx" Version="2.0.1209.2802" />
+  </ItemGroup>
+</Project>

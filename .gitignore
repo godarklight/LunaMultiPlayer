@@ -1,5 +1,6 @@
 *.user
 *.userprefs
+*.mdb
 .vs/
 External/KSPLibraries/*.dll
 External/Nuget/*
@@ -36,5 +37,18 @@ Server/obj/*
 LmpGlobal/*.csproj.user
 LmpGlobal/bin/*
 LmpGlobal/obj/*
+NET5/CachedQuickLz/bin/*
+NET5/CachedQuickLz/obj/*
+NET5/Lidgren.Network/bin/*
+NET5/Lidgren.Network/obj/*
+NET5/LmpCommon/bin/*
+NET5/LmpCommon/obj/*
+NET5/LmpGlobal/bin/*
+NET5/LmpGlobal/obj/*
+NET5/LmpUpdater/bin/*
+NET5/LmpUpdater/obj/*
+NET5/Server/bin/*
+NET5/Server/obj/*
+Server/packages
 *.nupkg
 .idea

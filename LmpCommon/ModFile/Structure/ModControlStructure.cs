@@ -569,7 +569,9 @@ namespace LmpCommon.ModFile.Structure
                 "RCSblock.01.small",
                 "RCSLinearSmall",
                 "flagPartSize1p5",
-                "flagPartSize4"
+                "flagPartSize4",
+                "spotLight1.v2",
+                "spotLight2.v2"
             };
         }
 
